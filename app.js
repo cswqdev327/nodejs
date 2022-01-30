@@ -6,6 +6,8 @@ var log = require('./middlewares/log');
 var app = express(),
     port = 3003;
 
+app.set('view engine', 'ejs');
+
 app.use( log.logger );
 app.use( express.static( __dirname + "/static" ) );
 
